@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/image_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#CCC">
+
+        <Button
+            android:id="@+id/image_cancel"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dip"
+            android:text="取消"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/image_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:drawableRight="@mipmap/icon_down_drak"
+            android:minHeight="0dip"
+            android:text="所有图片"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/image_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dip"
+            android:text="发送(0/0)"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gallery_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/no_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EDEDED"
+            android:gravity="center"
+            android:text="该设备上未找到图片"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#30000000"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/folder_picker"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

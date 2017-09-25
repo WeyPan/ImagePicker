@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="image_picker_anim_style">
+        <item name="android:windowEnterAnimation">@anim/image_picker_input</item>
+        <item name="android:windowExitAnimation">@anim/image_picker_output</item>
+    </style>
+</resources>
