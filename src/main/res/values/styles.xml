@@ -5,4 +5,5 @@
         <item name="android:windowEnterAnimation">@anim/image_picker_input</item>
         <item name="android:windowExitAnimation">@anim/image_picker_output</item>
     </style>
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 </resources>

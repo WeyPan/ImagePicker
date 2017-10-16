@@ -81,7 +81,7 @@ public class ImagePicker extends BasePopup implements View.OnClickListener, OnPi
             mCameraFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
                     + "/DCIM/temp/" + System.currentTimeMillis() + ".jpg");
             mCameraFile.getParentFile().mkdirs();
-            Uri uri = FileProvider.getUriForFile(mContext, "com.lenvar.android.imagepicker.imagePathprovider", mCameraFile);
+            Uri uri = FileProvider.getUriForFile(mContext, super.mContext.getApplicationInfo().processName + ".imagePathProvider", mCameraFile);
             //添加权限
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
